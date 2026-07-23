@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Как сделать запись на осень уже сейчас · Школа Ангелы Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', Arial, sans-serif; background: #F7F4FA; color: #444441; }
+.wrap { max-width: 520px; margin: 0 auto; background: #ffffff; min-height: 100vh; }
+.hero { background: #3D126A; padding: 28px 22px 32px; position: relative; overflow: hidden; }
+.blob1 { position: absolute; top: -40px; right: -30px; width: 190px; height: 190px; border-radius: 50%; background: #C5207F; opacity: .55; animation: blobFloat 6s ease-in-out infinite; }
+.blob2 { position: absolute; bottom: -60px; left: -40px; width: 160px; height: 160px; border-radius: 50%; background: #C8E84B; opacity: .32; animation: blobFloat2 7s ease-in-out infinite; }
+.hero > .in { position: relative; }
+.school { color: #C0995B; font-size: 12px; letter-spacing: 3px; font-weight: 600; }
+.badge { display: inline-block; margin-top: 14px; background: #C8E84B; color: #26215C; font-size: 12px; font-weight: 600; padding: 5px 13px; border-radius: 999px; }
+h1 { margin-top: 14px; color: #ffffff; font-size: 30px; line-height: 1.18; font-weight: 700; }
+h1 .lime { color: #C8E84B; }
+.sub { margin-top: 12px; color: #CFC0E0; font-size: 15px; line-height: 1.55; }
+.section { padding: 20px 18px 4px; }
+.card { border-radius: 14px; padding: 16px 18px; }
+.card.lav { background: #F0EBF5; }
+.card.pink { background: #FCE4EC; }
+.h-dot { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #3D126A; margin-bottom: 10px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #C8E84B; flex: none; }
+.card.lav p, .li { color: #4A3B60; font-size: 14px; line-height: 1.6; margin-bottom: 7px; }
+.videobox { position: relative; border-radius: 14px; overflow: hidden; background: #3D126A; aspect-ratio: 16/9; }
+.videobox iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vidnote { text-align: center; color: #888780; font-size: 12px; margin-top: 8px; }
+.num { color: #C5207F; font-weight: 600; }
+.main-li { font-size: 14px; line-height: 1.6; margin-bottom: 9px; }
+.card.pink .h { color: #993556; font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+.chk { display: flex; gap: 10px; align-items: flex-start; color: #72243E; font-size: 14px; line-height: 1.5; margin-bottom: 9px; }
+.chk .box { width: 18px; height: 18px; border: 2px solid #C5207F; border-radius: 5px; flex: none; margin-top: 1px; }
+.stats { display: flex; gap: 8px; margin-bottom: 10px; }
+.stat { flex: 1; background: #F0EBF5; border-radius: 12px; padding: 12px 6px; text-align: center; }
+.stat b { display: block; color: #C5207F; font-size: 17px; font-weight: 700; }
+.stat span { color: #6B5A85; font-size: 11px; }
+.quote { background: #ffffff; border: 1px solid #E4DCEF; border-left: 4px solid #C8E84B; border-radius: 0 12px 12px 0; padding: 12px 14px; }
+.quote p { color: #444441; font-size: 13.5px; font-style: italic; line-height: 1.55; }
+.mara { background: #3D126A; border-radius: 16px; padding: 20px 18px; position: relative; overflow: hidden; }
+.mara .in { position: relative; }
+.mbadge { display: inline-block; background: #C8E84B; color: #26215C; font-size: 11px; font-weight: 700; padding: 4px 11px; border-radius: 999px; letter-spacing: 1px; }
+.mara h2 { color: #ffffff; font-size: 22px; font-weight: 700; margin-top: 12px; }
+.mara .msub2 { color: #C8E84B; font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-top: 5px; }
+.mara .msub { color: #CFC0E0; font-size: 14px; line-height: 1.55; margin: 8px 0 14px; }
+.mday { color: #F0EBF5; font-size: 13.5px; line-height: 1.55; margin-bottom: 7px; }
+.mday b { color: #C8E84B; font-weight: 600; }
+.cta { display: block; background: #C5207F; border-radius: 12px; padding: 16px; text-align: center; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none; margin-top: 14px; animation: pulseBtn 2.6s ease-in-out infinite; }
+.mnote { color: #9C87B8; font-size: 12px; text-align: center; margin-top: 10px; }
+.footer { text-align: center; padding: 22px 18px 30px; color: #C0995B; font-size: 12px; letter-spacing: 1px; }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.on { opacity: 1; transform: translateY(0); }
+@keyframes blobFloat { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(16px,-12px) scale(1.12); } }
+@keyframes blobFloat2 { 0%,100% { transform: translate(0,0) scale(1.05); } 50% { transform: translate(-14px,10px) scale(0.95); } }
+@keyframes pulseBtn { 0%,100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="blob1"></div><div class="blob2"></div>
+    <div class="in">
+      <div class="school">ШКОЛА АНГЕЛЫ BEAUTY</div>
+      <span class="badge">Готовь сани летом</span>
+      <h1>Как сделать запись на осень <span class="lime">уже сейчас</span></h1>
+      <p class="sub">Осенняя карта клиента: фишка, которая заполняет салон в самые тихие месяцы года</p>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <div class="card lav">
+      <div class="h-dot"><span class="dot"></span>Зачем смотреть это видео</div>
+      <p>Узнаете фишку, которая заполняет запись в самый мёртвый сезон</p>
+      <p>Поймёте, почему бонусы должны расти от меньшего к большему</p>
+      <p style="margin-bottom:0;">Запустите карту в своём салоне уже на этой неделе</p>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <div class="videobox">
+      <iframe src="https://www.youtube.com/embed/rZsJhffy_SY?rel=0&modestbranding=1&playsinline=1" title="Осенняя карта на 3 месяца" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="vidnote">Видео · 14 минут · нажмите и смотрите прямо здесь</p>
+  </div>
+
+  <div class="section reveal">
+    <div class="h-dot"><span class="dot"></span>Главное из видео</div>
+    <p class="main-li"><span class="num">1.</span> Карта работает 3 месяца: сентябрь - приятный бонус, октябрь - побольше, ноябрь - самый желанный подарок</p>
+    <p class="main-li"><span class="num">2.</span> Выдаётся каждому клиенту августа, и каждый августовский визит превращается в 3 осенних</p>
+    <p class="main-li"><span class="num">3.</span> Наполнение выбираете под свой бюджет, главное - посчитать экономику подарка заранее</p>
+  </div>
+
+  <div class="section reveal">
+    <div class="card pink">
+      <div class="h">Сделайте после просмотра</div>
+      <div class="chk"><span class="box"></span>Выберите 3 бонуса лесенкой под свой прайс</div>
+      <div class="chk"><span class="box"></span>Посчитайте, сколько стоит салону подарок ноября</div>
+      <div class="chk" style="margin-bottom:0;"><span class="box"></span>Набросайте свою карту на листе и закажите печать</div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <div class="h-dot"><span class="dot"></span>Сколько денег прячется в базе салона</div>
+    <p class="main-li" style="margin-bottom:12px;">В июне на моём интенсиве владельцы салонов взяли калькулятор и посчитали, сколько денег лежит в их собственной базе клиентов - в тех самых номерах, которые молчат в программе записи. Вот их цифры:</p>
+    <div class="stats">
+      <div class="stat"><b>313 000 ₽</b><span>нашла в базе Ольга</span></div>
+      <div class="stat"><b>505 000 ₽</b><span>насчитала Марина</span></div>
+      <div class="stat"><b>1 209 000 ₽</b><span>нашла Наталья</span></div>
+    </div>
+    <div class="quote">
+      <p>«У меня 720 тысяч просто под ногами. Дальше считать не могу, мне дурно»</p>
+      <p style="font-style:normal; color:#888780; font-size:12px; margin-top:6px;">Из чата интенсива. Осенняя карта из этого видео - первый шаг, чтобы достать эти деньги из своей базы</p>
+    </div>
+  </div>
+
+  <div class="section reveal" style="padding-bottom:8px;">
+    <div class="mara">
+      <div class="blob1" style="width:120px;height:120px;top:-30px;right:-24px;"></div>
+      <div class="in">
+        <span class="mbadge">БЕСПЛАТНО · 3-4-5 АВГУСТА · ПРЯМЫЕ ЭФИРЫ</span>
+        <h2>Марафон ДЕНЬГИ В САЛОНЕ</h2>
+        <p class="msub2">Готовь сани летом</p>
+        <p class="msub">Осенняя карта - только один инструмент. За 3 вечера на марафоне мы соберём вашу осень целиком: полную запись на сентябрь, октябрь и ноябрь из клиентов, которые у вас уже есть.</p>
+        <p class="mday"><b>3 августа.</b> Ваша база. Полный алгоритм работы с базой по шагам и практика прямо в эфире. Вы уйдёте с готовым планом, как вернуть в кресла всех своих клиентов этой осенью</p>
+        <p class="mday"><b>4 августа.</b> Мастера и команда. Где искать сильных мастеров, как их нанимать и как выстроить команду, с которой салон растёт, а не выживает</p>
+        <p class="mday"><b>5 августа.</b> Администратор и система. Запись заполняется каждый день, даже когда вы уехали на море</p>
+        <a class="cta" href="https://s.salebot.pro/1181b2bbcfdb9f9fa0d0984e8c94994b_1?utm_source=video">Занять место бесплатно</a>
+        <p class="mnote">Веду живьём: тренировки и разборы ваших салонов</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">С уважением, Вероника Рубан</div>
+</div>
+<script>
+var obs = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } }); }, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+setTimeout(function(){ document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('on'); }); }, 2500);
+</script>
+</body>
+</html>
